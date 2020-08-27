@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/JohannesHool/zeichenKonverter.git/static/css/main.3949e8c6.chunk.css",
+    "main.js": "/JohannesHool/zeichenKonverter.git/static/js/main.c76a74b6.chunk.js",
+    "main.js.map": "/JohannesHool/zeichenKonverter.git/static/js/main.c76a74b6.chunk.js.map",
+    "runtime-main.js": "/JohannesHool/zeichenKonverter.git/static/js/runtime-main.cc919507.js",
+    "runtime-main.js.map": "/JohannesHool/zeichenKonverter.git/static/js/runtime-main.cc919507.js.map",
+    "static/js/2.ea98cccc.chunk.js": "/JohannesHool/zeichenKonverter.git/static/js/2.ea98cccc.chunk.js",
+    "static/js/2.ea98cccc.chunk.js.map": "/JohannesHool/zeichenKonverter.git/static/js/2.ea98cccc.chunk.js.map",
+    "index.html": "/JohannesHool/zeichenKonverter.git/index.html",
+    "precache-manifest.2c32be447b2f0ed5e1cff88579d11552.js": "/JohannesHool/zeichenKonverter.git/precache-manifest.2c32be447b2f0ed5e1cff88579d11552.js",
+    "service-worker.js": "/JohannesHool/zeichenKonverter.git/service-worker.js",
+    "static/css/main.3949e8c6.chunk.css.map": "/JohannesHool/zeichenKonverter.git/static/css/main.3949e8c6.chunk.css.map",
+    "static/js/2.ea98cccc.chunk.js.LICENSE.txt": "/JohannesHool/zeichenKonverter.git/static/js/2.ea98cccc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cc919507.js",
+    "static/js/2.ea98cccc.chunk.js",
+    "static/css/main.3949e8c6.chunk.css",
+    "static/js/main.c76a74b6.chunk.js"
+  ]
+}
