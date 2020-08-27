@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8aeac9b5663dcaefe41bfade924558ab",
+    "revision": "288d3e0766b99cf8a38f6f32e9d9b027",
     "url": "/zeichenKonverter/index.html"
   },
   {
-    "revision": "a9bad68e0636ad84857d",
+    "revision": "c9b7551982297a5c3159",
     "url": "/zeichenKonverter/static/css/main.3949e8c6.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/zeichenKonverter/static/js/2.ea98cccc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a9bad68e0636ad84857d",
-    "url": "/zeichenKonverter/static/js/main.125a849f.chunk.js"
+    "revision": "c9b7551982297a5c3159",
+    "url": "/zeichenKonverter/static/js/main.0888ec19.chunk.js"
   },
   {
     "revision": "c79704f38e4376cda959",
