@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/zeichenKonverter/static/css/main.3949e8c6.chunk.css",
-    "main.js": "/zeichenKonverter/static/js/main.0888ec19.chunk.js",
-    "main.js.map": "/zeichenKonverter/static/js/main.0888ec19.chunk.js.map",
+    "main.js": "/zeichenKonverter/static/js/main.aed8a14d.chunk.js",
+    "main.js.map": "/zeichenKonverter/static/js/main.aed8a14d.chunk.js.map",
     "runtime-main.js": "/zeichenKonverter/static/js/runtime-main.e909c18a.js",
     "runtime-main.js.map": "/zeichenKonverter/static/js/runtime-main.e909c18a.js.map",
     "static/js/2.ea98cccc.chunk.js": "/zeichenKonverter/static/js/2.ea98cccc.chunk.js",
     "static/js/2.ea98cccc.chunk.js.map": "/zeichenKonverter/static/js/2.ea98cccc.chunk.js.map",
     "index.html": "/zeichenKonverter/index.html",
-    "precache-manifest.7b5123edbce8e755577c9068d79e0778.js": "/zeichenKonverter/precache-manifest.7b5123edbce8e755577c9068d79e0778.js",
+    "precache-manifest.718c33a24303f6a45e17b4eba7b3fab9.js": "/zeichenKonverter/precache-manifest.718c33a24303f6a45e17b4eba7b3fab9.js",
     "service-worker.js": "/zeichenKonverter/service-worker.js",
     "static/css/main.3949e8c6.chunk.css.map": "/zeichenKonverter/static/css/main.3949e8c6.chunk.css.map",
     "static/js/2.ea98cccc.chunk.js.LICENSE.txt": "/zeichenKonverter/static/js/2.ea98cccc.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e909c18a.js",
     "static/js/2.ea98cccc.chunk.js",
     "static/css/main.3949e8c6.chunk.css",
-    "static/js/main.0888ec19.chunk.js"
+    "static/js/main.aed8a14d.chunk.js"
   ]
 }
