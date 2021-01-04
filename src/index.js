@@ -271,7 +271,7 @@ class EmojiFactory extends React.Component {
                   <div className="rounded text-center title-container-faded">
                     <h4>Zeichencodes</h4>
                   </div>
-                  <div className=" rounded auto-wrap">
+                  <div className=" rounded auto-wrap margin-bottom">
                     {this.showStrCodes()}
                   </div>
                 </div>
