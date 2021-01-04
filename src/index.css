@@ -46,7 +46,12 @@
 }
 
 .big-text {
+  font-size: large;
+}
+
+.bigger-text {
   font-size: xx-large;
+  margin-top: 20px;
 }
 
 .green-colored {

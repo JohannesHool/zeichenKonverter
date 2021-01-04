@@ -51,7 +51,9 @@ class EmojiFactory extends React.Component {
       textCodes: [],
       inputDisabled: true,
       emojiText: '',
-      lastSignZWJ: false
+      lastSignZWJ: false,
+      concatString: '',
+      resetDisabled: true
     };
   }
 
@@ -170,34 +172,31 @@ class EmojiFactory extends React.Component {
   }
 
   emojiSelectHandler = (event) => {
-    this.setState({ emojiText: this.state.emojiText + event });
-    this.setState({ lastSignZWJ: false });
+    this.setState({ emojiText: this.state.emojiText + event, concatString: this.state.concatString + " + " + event, resetDisabled: false});
   }
 
   skinToneSelectHandler = (event) => {
-    this.setState({ emojiText: this.state.emojiText + event });
-    this.setState({ lastSignZWJ: false });
+    this.setState({ emojiText: this.state.emojiText + event, concatString: this.state.concatString + " + " + event, resetDisabled: false});
   }
 
   zwjSelectHandler = () => {
-    this.setState({ emojiText: this.state.emojiText + String.fromCodePoint("0x" + "200d") });
-    this.setState({ lastSignZWJ: true });
+    this.setState({ emojiText: this.state.emojiText + String.fromCodePoint("0x" + "200d"), concatString: this.state.concatString + " + ZWD", resetDisabled: false});
   }
 
   resetEmmojis = () => {
-    this.setState({ emojiText: '' });
+    this.setState({ emojiText: '', concatString: '', resetDisabled: true});
+
   }
 
-  zwjInfo = () => {
-    if (this.state.lastSignZWJ) {
-      return "Letztes Zeichen ist ein Zero Width Joiner";
-    } else {
-      return "";
+  concatenatedEmojis = () => {
+    if(this.state.emojiText.length > 0){
+      return("= " + this.state.emojiText);
+    } else{
+      return("");
     }
   }
   showSelectedEmoji() {
     if (this.state.selectedEmoji.length > 0) {
-
       return (
         <div>
           <span className="emoji-span">{this.state.selectedEmoji}</span>
@@ -300,10 +299,10 @@ class EmojiFactory extends React.Component {
                 <div className="rounded text-center title-container-faded">
                   <h4>Resultat</h4>
                 </div>
-                <textarea class="flex-fill form-control prop-field big-text" type='text' value={this.state.emojiText} />
+                <div className="big-text">{this.state.concatString.substring(3)}</div>
+                <div className="bigger-text">{this.concatenatedEmojis()}</div>
                 <div className="margin-top">
-                  <span className="green-colored">{this.zwjInfo()}</span>
-                  <Button size="sm" onClick={this.resetEmmojis}>Zurücksetzen</Button>
+                  <Button disabled={this.state.resetDisabled} size="sm" onClick={this.resetEmmojis}>Zurücksetzen</Button>
                 </div>
 
               </div>
