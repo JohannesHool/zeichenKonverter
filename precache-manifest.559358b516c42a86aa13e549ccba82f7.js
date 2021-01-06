@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "320675961d4ffa1446266e7746405988",
+    "revision": "a341b54731352708b74951bb8a9cd41f",
     "url": "/zeichenKonverter/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/zeichenKonverter/static/css/2.1efe1917.chunk.css"
   },
   {
-    "revision": "174abcbd9d0800e0c29d",
+    "revision": "70d33cad0ec9b6873ae2",
     "url": "/zeichenKonverter/static/css/main.e6a60ebe.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/zeichenKonverter/static/js/2.76331bc7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "174abcbd9d0800e0c29d",
-    "url": "/zeichenKonverter/static/js/main.c5290bb3.chunk.js"
+    "revision": "70d33cad0ec9b6873ae2",
+    "url": "/zeichenKonverter/static/js/main.2db41d72.chunk.js"
   },
   {
     "revision": "c79704f38e4376cda959",
