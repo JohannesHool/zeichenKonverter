@@ -302,7 +302,7 @@ class EmojiFactory extends React.Component {
               <p><b>Beispiele:</b></p>
               <ul>
                 <li>👩 + 🏽 + ZWJ + 🚀 = 👩🏽‍🚀</li>
-                <li>🐱 + ZWJ + 🐉 = 🐱‍🐉</li>
+                <li>🐱 + ZWJ + 🚀 = 🐱‍🚀</li>
                 <li>👨 + ZWJ + ❤️ + ZWJ + 👨 = 👨‍❤️‍👨</li>
               </ul>
               <div className="col-md-6">
