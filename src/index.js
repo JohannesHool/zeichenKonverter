@@ -50,9 +50,8 @@ class EmojiFactory extends React.Component {
       text: '',
       textCodes: [],
       inputDisabled: true,
-      emojiText: '',
       lastSignZWJ: false,
-      concatString: '',
+      emojiSeq: [],
       resetDisabled: true
     };
   }
@@ -172,41 +171,57 @@ class EmojiFactory extends React.Component {
   }
 
   emojiSelectHandler = (event) => {
-    this.setState({ emojiText: this.state.emojiText + event, concatString: this.state.concatString + " + " + event, resetDisabled: false});
+    let tmp = this.state.emojiSeq;
+    tmp.push(event)
+    this.setState({ emojiSeq: tmp});
+    if(tmp.length > 0){
+      this.setState({resetDisabled: false});
+    }
   }
 
   skinToneSelectHandler = (event) => {
-    this.setState({ emojiText: this.state.emojiText + event, concatString: this.state.concatString + " + " + event, resetDisabled: false});
+    let tmp = this.state.emojiSeq;
+    tmp.push(event)
+    this.setState({ emojiSeq: tmp});
+    if(tmp.length > 0){
+      this.setState({resetDisabled: false});
+    }
   }
 
   zwjSelectHandler = () => {
-    this.setState({ emojiText: this.state.emojiText + String.fromCodePoint("0x" + "200d"), concatString: this.state.concatString + " + ZWD", resetDisabled: false});
-  }
-
-  resetEmmojis = () => {
-    this.setState({ emojiText: '', concatString: '', resetDisabled: true});
-
+    let tmp = this.state.emojiSeq;
+    tmp.push(String.fromCodePoint("0x" + "200d"))
+    this.setState({ emojiSeq: tmp});
+    if(tmp.length > 0){
+      this.setState({resetDisabled: false});
+    }
   }
 
   concatenatedEmojis = () => {
-    if(this.state.emojiText.length > 0){
-      return("= " + this.state.emojiText);
+    if(this.state.emojiSeq.length > 0){
+      return("= " + this.state.emojiSeq.join(''));
     } else{
       return("");
     }
   }
-  showSelectedEmoji() {
-    if (this.state.selectedEmoji.length > 0) {
-      return (
-        <div>
-          <span className="emoji-span">{this.state.selectedEmoji}</span>
-        </div>
-      );
+
+  emojiSequence = () => {
+    if(this.state.emojiSeq.length > 0){
+      let tmp = this.state.emojiSeq;
+      tmp = tmp.map(function(item) { return item == String.fromCodePoint("0x" + "200d") ? "ZWJ" : item; });
+      return(tmp.join(" + "));
     } else {
-      return;
+      return("");
     }
+  }
 
-
+  removeEmoji = () => {
+    let tmp = this.state.emojiSeq;
+    tmp.pop()
+    this.setState({ emojiSeq: tmp});
+    if(tmp.length < 1){
+      this.setState({resetDisabled: true});
+    }
   }
 
   utfConvertHandler = (event) => {
@@ -284,6 +299,12 @@ class EmojiFactory extends React.Component {
               <div className="rounded text-center title-container">
                 <h3>Emoji Generator</h3>
               </div>
+              <p><b>Beispiele:</b></p>
+              <ul>
+                <li>👩 + 🏽 + ZWJ + 🚀 = 👩🏽‍🚀</li>
+                <li>🐱 + ZWJ + 🐉 = 🐱‍🐉</li>
+                <li>👨 + ZWJ + ❤️ + ZWJ + 👨 = 👨‍❤️‍👨</li>
+              </ul>
               <div className="col-md-6">
                 <div className="rounded text-center title-container-faded">
                   <h4>Zeichen hinzufügen</h4>
@@ -299,12 +320,11 @@ class EmojiFactory extends React.Component {
                 <div className="rounded text-center title-container-faded">
                   <h4>Resultat</h4>
                 </div>
-                <div className="big-text">{this.state.concatString.substring(3)}</div>
+                <div className="big-text">{this.emojiSequence()}</div>
                 <div className="bigger-text">{this.concatenatedEmojis()}</div>
                 <div className="margin-top">
-                  <Button disabled={this.state.resetDisabled} size="sm" onClick={this.resetEmmojis}>Zurücksetzen</Button>
+                  <Button disabled={this.state.resetDisabled} size="sm" onClick={this.removeEmoji}>Entferne letztes Symbol</Button>
                 </div>
-
               </div>
             </div>
           </div>
